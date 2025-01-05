@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    background-color: #081b31;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#coin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+#coin {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    transform-style: preserve-3d;
+}
+
+#coin-text {
+    position: absolute;
+    backface-visibility: hidden;
+    
+}
+
+
+.coin .front,
+.coin .back {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: gold;
+}
+
+.coin .back {
+    transform: rotateX(180deg);
+    background-color: silver;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0);
+    }
+    50% {
+        transform: rotateX(1800deg);
+    }
+    100% {
+        transform: rotateX(3600deg);
+    }
+}
+
+.choices {
+    margin: 2rem 0;
+}
+
+.choice {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    margin: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.choice:hover {
+    background-color: #45a049;
+}
+
+#result-container {
+    display: inline-block; /* Display as inline-block */
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 10px;
+}
+
+
+.score-board {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
